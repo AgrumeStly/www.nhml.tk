@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页 - 洛谷 | 计算机科学教育新生态</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="csrf-token" content="1602232748:vPBdkyHRayyOBWuWTlEbdygTs9gKndCFsGmds08SFSo=">
+            <meta name="keywords" content="洛谷,洛谷Online judge,noip,noi,信息学,信息学竞赛,acm,竞赛,onlineJudge,洛谷Onlinejudge,信息学学习" />
+<meta name="description" content="洛谷创办于2013年，致力于为参加noip、noi、acm的选手提供清爽、快捷的编程体验。它拥有在线测题系统、强大的社区、在线学习功能。很多教程内容由各位oiers提供的，内容广泛。无论是初学oi的蒟蒻，还是久经沙场的神犇，均可从中获益，也可以帮助他人，共同进步。是学习noip等竞赛时理想的网站。" />
+        <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/katex.min.css"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/luogu3.css?ver=20190102">
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/highlight_tomorrow.css">
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.css?ver=20190219">
+    <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.luogu.com.cn/js/luogu3_pre.js?ver=20190101"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/fe/loader.css?ver=20201008">
+    <script>window._feInjection = JSON.parse(decodeURIComponent("%7B%22code%22%3A200%2C%22currentUser%22%3A%7B%22blogAddress%22%3A%22https%3A%5C%2F%5C%2Fwww.luogu.com.cn%5C%2Fblog%5C%2Ftrotyl-blog%5C%2F%22%2C%22followingCount%22%3A32%2C%22followerCount%22%3A302%2C%22ranking%22%3A1162%2C%22unreadMessageCount%22%3A0%2C%22unreadNoticeCount%22%3A0%2C%22uid%22%3A128369%2C%22name%22%3A%22Trotyl%22%2C%22slogan%22%3A%22AFO%20%7C%20www.trotyl.cf%22%2C%22badge%22%3A%22%22%2C%22isAdmin%22%3Afalse%2C%22isBanned%22%3Afalse%2C%22color%22%3A%22Orange%22%2C%22ccfLevel%22%3A0%2C%22verified%22%3Atrue%2C%22email%22%3A%22tianshiduan2018%40163.com%22%2C%22phone%22%3A%2215910673357%22%7D%2C%22currentTemplate%22%3A%22Excited%22%2C%22currentData%22%3A%7B%22shortHeader%22%3Atrue%2C%22pageName%22%3A%22%5Cu6d1b%5Cu8c37%22%2C%22title%22%3A%22%5Cu9996%5Cu9875%22%7D%2C%22currentTheme%22%3A%7B%22id%22%3A99%2C%22header%22%3A%7B%22imagePath%22%3A%22https%3A%5C%2F%5C%2Fi.loli.net%5C%2F2019%5C%2F08%5C%2F01%5C%2F5d42d1bb1b30749952.png%22%2C%22color%22%3A%5B%5B91%2C165%2C197%2C1%5D%2C%5B207%2C148%2C197%2C1%5D%5D%2C%22blur%22%3A0%2C%22brightness%22%3A0%2C%22degree%22%3A90%2C%22repeat%22%3A0%2C%22position%22%3A%5B50%2C50%5D%2C%22size%22%3A%5B-1%2C-1%5D%2C%22type%22%3A1%2C%22__CLASS_NAME%22%3A%22Luogu%5C%5CDataClass%5C%5CUser%5C%5CThemeConfig%5C%5CHeaderFooterConfig%22%7D%2C%22sideNav%22%3A%7B%22logoBackgroundColor%22%3A%5B91%2C165%2C197%2C1%5D%2C%22color%22%3A%5B91%2C165%2C197%2C1%5D%2C%22invertColor%22%3Atrue%2C%22__CLASS_NAME%22%3A%22Luogu%5C%5CDataClass%5C%5CUser%5C%5CThemeConfig%5C%5CSideNavConfig%22%7D%2C%22footer%22%3A%7B%22imagePath%22%3Anull%2C%22color%22%3A%5B%5B91%2C165%2C197%2C1%5D%5D%2C%22blur%22%3A0%2C%22brightness%22%3A0%2C%22degree%22%3A0%2C%22repeat%22%3A0%2C%22position%22%3A%5B0%2C0%5D%2C%22size%22%3A%5B0%2C0%5D%2C%22type%22%3A2%2C%22__CLASS_NAME%22%3A%22Luogu%5C%5CDataClass%5C%5CUser%5C%5CThemeConfig%5C%5CHeaderFooterConfig%22%7D%7D%7D"));window._feConfigVersion=1602137435;</script>
+    <script>window._release = '20201008';</script>
+    <script src="https://cdn.luogu.com.cn/fe/loader.js?ver=20201008" charset="utf-8" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+    function scrollToId (id) {
+        $('html, body').animate({
+            scrollTop: ($('#' + id).offset().top)
+        }, 500);
+    }
+</script>
+<style>
+    .lg-toolbar {
+        display: none;
+    }
+
+    #app-old{
+        display: block;
+        margin-bottom: 2em;
+        /* position: relative;*/
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    code {
+        font-family: monospace, "Courier New";
+    }
+
+</style>
+<div id="app-old">
+<script>
+
+
+</script>
+<div class="lg-index-content am-center ">
+
+    <div class="am-g">
+        <div class="am-u-md-12 ">
+            <div class="lg-article">
+                <div class="am-g">
+                    <div class="am-u-md-8">
+                        <div class="am-slider am-slider-default" data-am-flexslider id="lg-slider">
+                            <ul class="am-slides">
+								<li><a target="_blank"  href = "https://www.luogu.com.cn/contest/28153"><img src='https://cdn.luogu.com.cn/upload/image_hosting/xm3xr7dc.png'/></a></li><li><a target="_blank"  href = "https://www.luogu.com.cn/contest/34867"><img src='https://cdn.luogu.com.cn/upload/image_hosting/wzxg822y.png'/></a></li><li><a target="_blank"  href = "https://www.luogu.com.cn/discuss/show/256458"><img src='https://cdn.luogu.com.cn/upload/image_hosting/k7k0fbou.png'/></a></li><li><a target="_blank"  href = "https://www.luogu.org/discuss/show/47327"><img src='https://cdn.luogu.com.cn/upload/pic/22071.png'/></a></li>                            </ul>
+                        </div>
+                    </div>
+                    <div class="am-u-md-4 lg-punch am-text-center">
+                        <h2 style='margin-bottom: 0'><a class='lg-fg-orange lg-bold' href="/user/128369"  target="_blank">Trotyl</a> 的运势</h2><span class="lg-punch-result lg-fg-green">§ 中平 §</span><div class="am-g">
+    <div class="am-u-sm-6 lg-fg-red">
+                    <span class="lg-bold">宜：</span>开电脑<br>
+            <span class="lg-small">电脑的状态也很好</span><br>
+            <span class="lg-bold">宜：</span>学习珂学<br>
+            <span class="lg-small">珂朵莉太可爱了</span>
+        
+
+    </div>
+    <div class="am-u-sm-6">
+                    <span class="lg-bold">忌：</span>泡妹子<br>
+            <span class="lg-small">一定会被拒绝</span><br>
+            <span class="lg-bold">忌：</span>吃饭<br>
+            <span class="lg-small">小心变胖啊</span>
+            </div>
+    <div class="am-u-sm-12 lg-small">
+        &nbsp;<br>
+        你已经在洛谷连续打卡了 <strong>112</strong> 天</strong><br>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-g">
+        <div class="am-u-md-3">
+            <div class="lg-article lg-index-stat">
+                <h2>问题跳转</h2>
+                <div class="am-input-group am-input-group-primary am-input-group-sm">
+                    <input type="text" class="am-form-field" placeholder="例：P1001，可跳至A+B" name="toproblem">
+                </div>
+                <p>
+                    <button class="am-btn am-btn-danger am-btn-sm" name="goto">跳转</button>
+                    <button class="am-btn am-btn-primary am-btn-sm" name="gotorandom">随机跳题</button>
+                </p>
+            </div>
+        </div>
+        <div class="am-u-md-9">
+            <div class="lg-article lg-index-stat" style="padding: 0">
+                                    <div class=" am-g" style="height: 100%;padding-top: 10px;">
+                        <div id="container" class="am-u-md-6 am-text-center" style=" height:180px; margin-right: -20px">
+                        </div>
+                        <div id="container2" class="am-u-md-6 am-text-center" style=" height:180px ">
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            $('#container').highcharts({"title":{"text":"","floating":true},"chart":{"backgroundColor":"rgba(0,0,0,0)"},"legend":{"enabled":false},"xAxis":{"categories":["Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"],"floating":true,"minTickInterval":2},"yAxis":[{"labels":{"format":"{value}","style":{"color":"Highcharts.getOptions().colors[1]"}},"title":{"text":"\u7d2f\u79ef\u901a\u8fc7","style":{"color":"Highcharts.getOptions().colors[1]"}},"floor":181},{"labels":{"format":"{value}","style":{"color":"Highcharts.getOptions().colors[3]"},"enabled":false},"title":{"text":"\u65b0\u901a\u8fc7","style":{"color":"Highcharts.getOptions().colors[3]"},"enabled":false},"opposite":true}],"tooltip":{"shared":true},"series":[{"name":"\u7d2f\u79ef\u901a\u8fc7\u6570","type":"area","data":[186,206,245,265,276,303,341,357,381,413,431,439]},{"name":"\u5f53\u6708\u901a\u8fc7\u6570","type":"column","data":[5,25,40,22,15,29,42,19,26,38,20,12],"yAxis":1}],"credits":{"enabled":false}});
+                            $('#container2').highcharts({"title":{"text":"","floating":true},"chart":{"backgroundColor":"rgba(0,0,0,0)"},"legend":{"enabled":false},"xAxis":{"categories":["10-1","10-2","10-3","10-4","10-5","10-6","10-7","10-8","10-9","10-10","10-11","10-12","10-13","10-14","10-15","10-16","10-17","10-18","10-19","10-20","10-21","10-22","10-23","10-24","10-25","10-26","10-27","10-28","10-29","10-30","10-31"],"floating":true,"minTickInterval":5},"yAxis":[{"labels":{"format":"{value}","style":{"color":"Highcharts.getOptions().colors[1]"},"enabled":false},"title":{"text":"\u7d2f\u79ef\u901a\u8fc7","style":{"color":"Highcharts.getOptions().colors[1]"},"enabled":false},"floor":434},{"labels":{"format":"{value}","style":{"color":"Highcharts.getOptions().colors[3]"}},"title":{"text":"\u65b0\u901a\u8fc7","style":{"color":"Highcharts.getOptions().colors[3]"}},"opposite":true}],"tooltip":{"shared":true},"series":[{"name":"\u7d2f\u79ef\u901a\u8fc7\u6570","type":"area","data":[439,439,439,439,439,439,439,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]},{"name":"\u5f53\u65e5\u901a\u8fc7\u6570","type":"column","data":[0,0,0,0,0,0,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"yAxis":1}],"credits":{"enabled":false}});
+                        });
+                    </script>
+                            </div>
+        </div>
+    </div>
+
+    
+    <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-4 lg-right">
+            <div class="lg-article">
+                <h2>本站公告</h2>
+                                    <p><a data-pjax href="/discuss/show?postid=241461">洛谷新用户必读</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=244341">【集合贴】公告整合贴</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=174811">洛谷主题库题目规范</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=174936">公开比赛要求</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=174934">题解审核及反馈要求</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=86673">评测机语言环境信息</a></p>
+                                    <p><a data-pjax href="/discuss/show?postid=223773">洛谷更新日志</a></p>
+                            </div>
+                            <div class="lg-article">
+                                        <h2>任务计划
+                                                    <button name = "task-edit" class="am-btn am-btn-sm am-btn-primary lg-right" onclick="$('.tasklist-edit').show();$(this).hide();$('[name=task-end-edit]').show()">编辑</button>
+                            <button name = "task-end-edit"class="am-btn am-btn-sm am-btn-danger lg-right "
+                                    onclick="$('.tasklist-edit').hide();$(this).hide();$('[name=task-edit]').show()" style="display: none;">结束编辑</button>
+                                            </h2>
+                                                                                            <div class="tasklist-item" data-pid="P1325">
+                            <div><a href="/record/list?user=128369&pid=P1325" target="_blank"><strong class="lg-fg-red">0</strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P1325"  target="_blank"><b>P1325</b> 雷达安装</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P1325">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="P3122">
+                            <div><a href="/record/list?user=128369&pid=P3122" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P3122"  target="_blank"><b>P3122</b> [USACO15FEB]Fencing the Herd G</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P3122">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="P4724">
+                            <div><a href="/record/list?user=128369&pid=P4724" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P4724"  target="_blank"><b>P4724</b> 【模板】三维凸包</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P4724">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="AT4351">
+                            <div><a href="/record/list?user=128369&pid=AT4351" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/AT4351"  target="_blank"><b>AT4351</b> [ARC101B] Median of Medians</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="AT4351">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="P6733">
+                            <div><a href="/record/list?user=128369&pid=P6733" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P6733"  target="_blank"><b>P6733</b> 「Wdsr-2」间歇泉</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P6733">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="P1419">
+                            <div><a href="/record/list?user=128369&pid=P1419" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P1419"  target="_blank"><b>P1419</b> 寻找段落</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P1419">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="P2096">
+                            <div><a href="/record/list?user=128369&pid=P2096" target="_blank"><strong class="lg-fg-green"><i class="am-icon-check"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P2096"  target="_blank"><b>P2096</b> 最佳旅游线路</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="P2096">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                                                    <div class="tasklist-item" data-pid="U134036">
+                            <div><a href="/record/list?user=128369&pid=U134036" target="_blank"><strong class="lg-fg-green"><i class="am-icon-check"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/U134036"  target="_blank"><b>U134036</b> CSP2020第一轮模拟</a></div>
+                            <div style="margin:10px 0;display:none;" class="tasklist-edit">
+                                <button class="am-btn am-btn-sm am-btn-success"
+                                        data-pid="U134036">完成任务</button>
+                                <hr>
+                            </div>
+                        </div>
+                                        <script>
+                        $(".tasklist-edit").children("button").click(function() {
+                            var pid = $(this).attr('data-pid');
+                            $.ajax({
+                                type: "post",
+                                url: '/fe/api/problem/tasklistRemove',
+                                data: JSON.stringify({
+                                    pid: pid
+                                }),
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                            })
+                            $("div.tasklist-item[data-pid="+pid+"]").hide();
+                        });
+                    </script>
+                    <h2>智能推荐</h2>
+                                            <div><div><a href="/record/list?user=128369&pid=P1182" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P1182"  target="_blank"><b>P1182</b> 数列分段 Section II</a></div></div>
+                                            <div><div><a href="/record/list?user=128369&pid=P1908" target="_blank"><strong class="lg-fg-orange">25</strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P1908"  target="_blank"><b>P1908</b> 逆序对</a></div></div>
+                                            <div><div><a href="/record/list?user=128369&pid=P3853" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P3853"  target="_blank"><b>P3853</b> [TJOI2007]路标设置</a></div></div>
+                                            <div><div><a href="/record/list?user=128369&pid=P6851" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P6851"  target="_blank"><b>P6851</b> onu</a></div></div>
+                                            <div><div><a href="/record/list?user=128369&pid=P1083" target="_blank"><strong class=""><i class="am-icon-minus"></i></strong></a><a class='colored'  style="padding-left: 3px"  href="/problemnew/show/P1083"  target="_blank"><b>P1083</b> 借教室</a></div></div>
+                                        <div><small><br>洛谷根据您近期的做题情况，使用机器学习自动为您推荐符合您目前程度的题目。本列表每日更新一次。</small></div>
+                </div>
+                                    <div class="lg-article am-hide-sm">
+                <h2>友情链接</h2>
+                <p>
+                    <strong>学校与机构</strong><br>
+                    <a href="http://www.yizhong.xm.fj.cn">厦门一中</a><br>
+                    <a href="https://www.chtholly.ac.cn/">中国珂学院</a><br>
+                </p>
+                <p>
+                    <strong>合作伙伴</strong><br>
+                    <a href="http://tianhai.info/">天海信息科技</a>及<a href="http://www.oiinhand.info/">Oi In Hand</a><br/>
+                    <a href="https://vijos.org">Vijos</a> |
+                    <a href="https://ihola.one/">¡Hola!</a> |
+                    <a href="https://www.mxdeu.com/" target="_blank">梦想德语</a>
+                    <br/>
+                </p>
+
+                <p>
+                    <strong>学生博客</strong><br>
+
+                    <a href="http://ruanx.pw/" target="_blank">阮行止的博客</a> |
+                    <a href="https://www.johnzhang.xyz/" target="_blank">张佑杰的博客</a>
+
+                </p>
+
+                <p>
+                    <strong>洛谷项目</strong><br>
+
+                    <a href="/discuss/show?postid=11410" target="_blank">CYaRon 测试数据生成器</a><br>
+                    <a href="https://class.luogu.com.cn" target="_blank">洛谷网校</a><br>
+                    <a href="https://github.com/luogu-dev/markdown-palettes" target="_blank">Markdown*Palettes</a>
+                </p>
+            </div>
+                    </div>
+
+        <div class="am-u-lg-9 am-u-md-8 lg-index-benben lg-right">
+            <div class="lg-article">
+                <h2 style="margin-bottom: 5px;">近期比赛</h2>
+                                    <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/34867">【LGR-(-11)】CSP 2020 第一轮（初赛）模拟</a> &nbsp;
+                                
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-red">官方比赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-orange">OI</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    10-08 09:30<br>
+                                10-08 12:00                                </span>
+                        </div>
+                    </section>
+                                        <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/34929">【LGR-077】洛谷 10 月月赛 I Div.1</a> &nbsp;
+                                <span class="am-badge am-radius lg-bg-green">Rated</span>
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-red">官方比赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-yellow">IOI</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    10-06 14:00<br>
+                                10-06 18:30                                </span>
+                        </div>
+                    </section>
+                                        <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/28153">【LGR-077】洛谷 10 月月赛 I Div.2</a> &nbsp;
+                                <span class="am-badge am-radius lg-bg-green">Rated</span>
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-red">官方比赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-yellow">IOI</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    10-06 14:00<br>
+                                10-06 18:30                                </span>
+                        </div>
+                    </section>
+                                        <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/34608">君のNOIP。のCSP信心赛</a> &nbsp;
+                                
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-bluelight">个人公开赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-yellow">乐多赛</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                <a class='lg-fg-red lg-bold' href="/user/250469"  target="_blank">君のNOIP。</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#5eb95e" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a>                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    10-04 14:00<br>
+                                10-04 18:30                                </span>
+                        </div>
+                    </section>
+                                        <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/34123">【LGR-076】洛谷 ⑨ 月月赛 I &amp; Cnoi2020</a> &nbsp;
+                                <span class="am-badge am-radius lg-bg-green">Rated</span>
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-red">官方比赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-yellow">IOI</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    09-19 14:00<br>
+                                09-19 18:00                                </span>
+                        </div>
+                    </section>
+                                        <section class="am-panel lg-index-contest am-panel-danger">
+                        <header class="am-panel-hd">
+                            <h3 class="am-panel-title">
+                                <a data-pjax href="/contestnew/show/33886">「EZEC」 Round 4</a> &nbsp;
+                                
+                            </h3>
+                        </header>
+                        <div class="am-panel-bd">
+                                <span class="lg-small lg-inline-up">
+                                    <span class="am-badge am-radius lg-bg-greendark">团队公开赛</span><br>
+                                    <span class="am-badge am-radius lg-bg-yellow">IOI</span>                                </span>
+                            <span class="lg-small lg-inline-up">
+                                    <strong class="lg-fg-red">已结束</strong>                                比赛已结束                                <br>
+                                		<a data-pjax href="/team/show?teamid=26127">EZEC出题组-公开赛</a>                                </span>
+                            <span class="lg-small lg-inline-up lg-right lg-md-hide">
+                                    09-06 13:00<br>
+                                09-06 18:30                                </span>
+                        </div>
+                    </section>
+                                </div>
+            <div class="lg-article">
+                <h2>最近讨论</h2>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/51376" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/51376.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=47327">【日报#294】OI中你可能会用到的…</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-red lg-bold' href="/user/51376"  target="_blank">MicroMaker</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#5eb95e" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=academics">学术版</a><br>
+                    @07-03 12:07                                        <span class="lg-small">9317回复</span>
+                                                                                    <span class="am-badge am-radius lg-bg-red">置顶</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/3" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/3.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=152590">（8.25 重置）洛谷讨论区规范</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-purple lg-bold' href="/user/3"  target="_blank">洛谷</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=siteaffairs">站务版</a><br>
+                    @10-09 23:10                                        <span class="lg-small">1540回复</span>
+                                                                                    <span class="am-badge am-radius lg-bg-red">置顶</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/1" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/1.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263402">洛谷初赛模拟 赛时通知帖</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-purple lg-bold' href="/user/1"  target="_blank">kkksc03</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#3498db" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a>&nbsp;<span class="am-badge am-radius lg-bg-purple">吉祥物</span></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=problem">题目总版</a><br>
+                    @10-08 10:08                                        <span class="lg-small">92回复</span>
+                                                                                    <span class="am-badge am-radius lg-bg-red">置顶</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/91252" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/91252.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=262794">洛谷 10 月月赛 I 赛后总结帖&amp;赛…</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-red lg-bold' href="/user/91252"  target="_blank">EndSaH</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#f1c40f" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=academics">学术版</a><br>
+                    @10-06 21:51                                        <span class="lg-small">104回复</span>
+                                                                                    <span class="am-badge am-radius lg-bg-red">置顶</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/397" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/397.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=256458">洛谷 2020 秋令营 - CSP冲刺课程</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-purple lg-bold' href="/user/397"  target="_blank">洛谷网校</a>&nbsp;<span class="am-badge am-radius lg-bg-purple">管理员</span></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=siteaffairs">站务版</a><br>
+                    @09-12 18:15                                        <span class="lg-small">202回复</span>
+                                                                                    <span class="am-badge am-radius lg-bg-red">置顶</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/124683" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/124683.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263602">关于【请求过于频繁】</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-orange lg-bold' href="/user/124683"  target="_blank">Alfred_Tirpitz</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=relevantaffairs">灌水区</a><br>
+                    @10-08 16:38                                        <span class="lg-small">0回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/250699" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/250699.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263601">翻译糊了</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-red lg-bold' href="/user/250699"  target="_blank">wqy_03</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=CF1406A">CF1406A Subset Mex</a><br>
+                    @10-08 16:37                                        <span class="lg-small">1回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/129127" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/129127.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263600">SD  CSP-J初赛要多少分才能过</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-bluelight' href="/user/129127"  target="_blank">Abstentious</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=relevantaffairs">灌水区</a><br>
+                    @10-08 16:35                                        <span class="lg-small">2回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/311333" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/311333.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263599">我崩啦啊，0分传说......?</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-bluelight' href="/user/311333"  target="_blank">liruikaiαβγ</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=P5741">P5741 【深基7.例1…</a><br>
+                    @10-08 16:35                                        <span class="lg-small">0回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/114012" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/114012.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263598">关于模拟赛阅读程序第二题</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-green' href="/user/114012"  target="_blank">chichichichi</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#5eb95e" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=academics">学术版</a><br>
+                    @10-08 16:34                                        <span class="lg-small">3回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/399239" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/399239.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263597">求助P5017 摆渡车</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-gray' href="/user/399239"  target="_blank">w20230071</a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=P5017">P5017 摆渡车</a><br>
+                    @10-08 16:33                                        <span class="lg-small">0回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                                <section class="am-panel lg-index-contest am-panel-primary">
+
+                    <div class="am-panel-bd">
+                        <div class="lg-inline-up"><a href="/user/151647" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/151647.png" class="am-comment-avatar"/>
+    </a></div>
+                        <div class="lg-inline-up">
+                            <a data-pjax href="/discuss/show?postid=263595">请求将模拟赛的题目放在洛谷有题</a>
+
+                            <br>
+                            <span class="lg-small"><a class='lg-fg-orange lg-bold' href="/user/151647"  target="_blank">无敌的蒟蒻</a>&nbsp;<a class="sb_amazeui" target="_blank" href="/discuss/show/142324"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#5eb95e" style="margin-bottom: -3px;"><path d="M16 8C16 6.84375 15.25 5.84375 14.1875 5.4375C14.6562 4.4375 14.4688 3.1875 13.6562 2.34375C12.8125 1.53125 11.5625 1.34375 10.5625 1.8125C10.1562 0.75 9.15625 0 8 0C6.8125 0 5.8125 0.75 5.40625 1.8125C4.40625 1.34375 3.15625 1.53125 2.34375 2.34375C1.5 3.1875 1.3125 4.4375 1.78125 5.4375C0.71875 5.84375 0 6.84375 0 8C0 9.1875 0.71875 10.1875 1.78125 10.5938C1.3125 11.5938 1.5 12.8438 2.34375 13.6562C3.15625 14.5 4.40625 14.6875 5.40625 14.2188C5.8125 15.2812 6.8125 16 8 16C9.15625 16 10.1562 15.2812 10.5625 14.2188C11.5938 14.6875 12.8125 14.5 13.6562 13.6562C14.4688 12.8438 14.6562 11.5938 14.1875 10.5938C15.25 10.1875 16 9.1875 16 8ZM11.4688 6.625L7.375 10.6875C7.21875 10.8438 7 10.8125 6.875 10.6875L4.5 8.3125C4.375 8.1875 4.375 7.96875 4.5 7.8125L5.3125 7C5.46875 6.875 5.6875 6.875 5.8125 7.03125L7.125 8.34375L10.1562 5.34375C10.3125 5.1875 10.5312 5.1875 10.6562 5.34375L11.4688 6.15625C11.5938 6.28125 11.5938 6.5 11.4688 6.625Z"></path></svg></a></span>
+                            <span class="lg-small">In
+                    <a data-pjax
+                       href="/discuss/lists?forumname=relevantaffairs">灌水区</a><br>
+                    @10-08 16:32                                        <span class="lg-small">0回复</span>
+                                                            </span>
+                        </div>
+                    </div>
+                </section>
+                            </div>
+
+                                                <div class="lg-article">
+                        <h2>有什么新鲜事告诉大家</h2>
+                                                <div class="am-form-group am-form">
+                            <textarea rows="3" id="feed-content"></textarea>
+                        </div>
+                        <button class="am-btn am-btn-danger am-btn-sm" id="feed-submit">　发射犇犇！　</button>
+
+                    </div>
+                    <div class="lg-article">
+                        <ul class="am-nav am-nav-pills am-nav-justify" id="home-center-nav">
+                            <li class="am-active feed-selector" data-mode="watching"><a style="cursor: pointer">我关注的</a></li>
+                            <li class="feed-selector" data-mode="my"><a style="cursor: pointer">我发布的</a></li>
+                        </ul>
+                    </div>
+                    <ul class="am-comments-list am-comments-list-flip" id="feed">
+                    </ul>
+                    <div class="lg-article am-text-center" id="feed-more"><a>点击查看更多...</a></div>
+                                    </div>
+    </div>
+</div>
+
+<div class="am-modal am-modal-prompt" tabindex="-1" id="report">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">反馈</div>
+        <div class="am-modal-bd">
+            如果你认为某条动态有问题，欢迎向洛谷反馈，以帮助更多的同学。
+            <br><br>
+            <select data-am-selected="{ btnStyle: 'secondary'}" name="reason">
+                <option value="不友善内容">辱骂与不友善内容</option>
+                <option value="无意义内容">无法令人理解的无意义内容</option>
+                <option value="违法内容">违法内容与有害信息</option>
+                <option value="其他">其他原因（请解释）</option>
+            </select><br><br>
+            请具体说明理由，以增加反馈的可信度。
+            <input type="text" class="am-modal-prompt-input" name="content">
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    var feedPage = 1;
+    var feedMode = '';
+    var $feed = $("#feed");
+    function loadFeed() {
+        $.get("/feed/"+feedMode+"?page="+feedPage, function(resp) {
+            $feed.append(resp);
+            $("#feed-more").children("a").text("点击查看更多...")
+            $("[name=feed-delete]").click(function() {
+                $.post("/api/feed/delete/"+$(this).attr('data-feed-id'), function() {
+                    switchMode('watching');
+                })
+            })
+            $("[name=feed-reply]").click(function() {
+                var content = $(this).parents("li.feed-li").find(".feed-comment").text();
+                $("#feed-content").val(" || @" + $(this).attr('data-username') + " : " + content)
+            })
+            $("[name=feed-report]").click(function () {
+                var reportType = $(this).attr('data-report-type'), reportID = $(this).attr('data-report-id');
+                $('#report').modal({
+                    relatedTarget: this,
+                    onConfirm: function (e) {
+                        var reason = $('[name=reason]').val();
+                        var detail = $('[name=content]').val();
+
+                        $.post('/api/report/'+reportType, {
+                            relevantID: reportID,
+                            reason: reason + ' ' + detail
+                        }, function (data) {
+                            show_alert("提示", data.data);
+                        });
+                    }
+                });
+            });
+        });
+        feedPage++;
+    }
+
+    function switchMode(mode) {
+        feedMode = mode;
+        feedPage = 1;
+        $feed.html('');
+        $("#feed-more").show();
+        $(".feed-selector").removeClass("am-active");
+        $(".feed-selector[data-mode="+mode+"]").addClass("am-active");
+        loadFeed();
+    }
+
+    $(document).ready(function () {
+                    if($feed) switchMode('watching');
+        
+        $("#feed-more").click(function() {
+            $(this).children("a").text("加载中...");
+            loadFeed();
+        });
+        $(".feed-selector").click(function() {
+            var mode = $(this).attr('data-mode');
+            switchMode(mode);
+        });
+
+        $("#feed-submit").click(function () {
+            $(this).addClass("am-disabled");
+            var content = $('#feed-content').val(), e = this;
+            $.post("/api/feed/postBenben", {content: content}, function (resp) {
+                if(resp.status !== 200) {
+                    show_alert("好像哪里有点问题", resp.data);
+                } else {
+                    $(e).removeClass("am-disabled");
+                    $("#feed-content").val('');
+                    switchMode('watching');
+                }
+            });
+        });
+    });
+
+
+    $("[name=punch]").click(function () {
+        $(this).addClass("am-disabled");
+        $(this).html("<i class='am-icon-spinner am-icon-pulse'></i>求签中");
+        verify = $("[name=verify]").val();
+        $.post("/index/ajax_punch", {verify:verify}, function (data) {
+            var res;
+            res = eval("(" + data + ")");
+            if (res["code"] != 200) {
+                show_alert("好像哪里有点问题", res["message"]);
+                $("[name=punch]").text('点击打卡').removeClass("am-disabled")
+            }
+            else {
+                $('.lg-punch').html(res["more"]["html"]);
+            }
+        });
+    });
+    $("[name=toproblem]").keyup(function (event) {
+        if (event.keyCode === 13) {
+			if($(this).val() === '') return;
+            var pid = $(this).val()
+            if(!isNaN(pid)) pid = 'P'+pid
+            goto_url('/problemnew/show/' + pid)
+        }
+    })
+    $("[name=gotorandom]").click(function () {
+        goto_url('/problemnew/show/P' + (parseInt(Math.random(0, 1) * 4486) + 1000));
+    });
+    $("[name=goto]").click(function () {
+        if($('[name=toproblem]').val()==='') {
+            show_alert("提示", "请输入题号");
+            return;
+        }
+        var pid = $('[name=toproblem]').val()
+        if(!isNaN(pid)) pid = 'P'+pid
+        goto_url('/problemnew/show/' + pid)
+    });
+</script>
+</div>
+
+<div class="am-modal am-modal-alert" tabindex="-1" id="lg-alert">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd" id="lg-alert-title"></div>
+        <div class="am-modal-bd" id="lg-alert-message"></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+
+<script src="/js/ace/ace.js"></script>
+
+<script src="https://cdn.luogu.com.cn/js/vendor.js" data-manual></script>
+<script src="https://cdn.luogu.com.cn/js/jsmind.js" data-manual></script>
+<!--
+<script src="https://cdn.luogu.com.cn/js/ajaxfileupload.js" data-manual></script>
+<script src="https://cdn.luogu.com.cn/js/jquery.pjax.js" data-manual></script>
+-->
+
+<!--ajaxfileupload.js highlight.pack.js jquery.pjax.js markDownEditor.js poshytip.js qrcode.min.js-->
+
+<script src="https://cdn.luogu.com.cn/js/amazeui.min.js"></script>
+<script src="https://cdn.luogu.com.cn/js/highcharts.js"></script>
+<script src="https://cdn.luogu.com.cn/js/highcharts-more.js"></script>
+<script src="/static/katex/katex.min.js"></script>
+<script src="/static/katex/contrib/auto-render.min.js"></script>
+<script src="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.min.js?ver=20190219"></script>
+<script src="https://cdn.luogu.com.cn/js/luogu3.js?ver=20190724"></script>
+
+<!--script src="//www.recaptcha.net/recaptcha/api.js?hl=zh-CN&render=explicit&onload=renderCaptcha" async defer></script-->
+</body>
+</html>
