@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.css?ver=20190219">
     <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdn.luogu.com.cn/js/luogu3_pre.js?ver=20190101"></script>
+	<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen"/>
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/fe/loader.css?ver=20201008">
@@ -620,21 +621,8 @@
                 </section>
                             </div>
 
-                                                <div class="lg-article">
-                        <h2>有什么新鲜事告诉大家</h2>
-                                                <div class="am-form-group am-form">
-                            <textarea rows="3" id="feed-content"></textarea>
-                        </div>
-                        <button class="am-btn am-btn-danger am-btn-sm" id="feed-submit">　发射犇犇！　</button>
-
-                    </div>
                     <div class="lg-article">
-                        <ul class="am-nav am-nav-pills am-nav-justify" id="home-center-nav">
-                            <li class="am-active feed-selector" data-mode="watching"><a style="cursor: pointer">我关注的</a></li>
-                            <li class="feed-selector" data-mode="my"><a style="cursor: pointer">我发布的</a></li>
-                        </ul>
 			<div class="mvcomment"></div>
-			<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 			<script>
 				new Valine({
 					el: '#vcomments',
@@ -647,10 +635,6 @@
 				});
 			</script>
                     </div>
-                    <ul class="am-comments-list am-comments-list-flip" id="feed">
-                    </ul>
-                    <div class="lg-article am-text-center" id="feed-more"><a>点击查看更多...</a></div>
-                                    </div>
     </div>
 </div>
 
@@ -676,119 +660,6 @@
     </div>
 </div>
 
-<script>
-    var feedPage = 1;
-    var feedMode = '';
-    var $feed = $("#feed");
-    function loadFeed() {
-        $.get("/feed/"+feedMode+"?page="+feedPage, function(resp) {
-            $feed.append(resp);
-            $("#feed-more").children("a").text("点击查看更多...")
-            $("[name=feed-delete]").click(function() {
-                $.post("/api/feed/delete/"+$(this).attr('data-feed-id'), function() {
-                    switchMode('watching');
-                })
-            })
-            $("[name=feed-reply]").click(function() {
-                var content = $(this).parents("li.feed-li").find(".feed-comment").text();
-                $("#feed-content").val(" || @" + $(this).attr('data-username') + " : " + content)
-            })
-            $("[name=feed-report]").click(function () {
-                var reportType = $(this).attr('data-report-type'), reportID = $(this).attr('data-report-id');
-                $('#report').modal({
-                    relatedTarget: this,
-                    onConfirm: function (e) {
-                        var reason = $('[name=reason]').val();
-                        var detail = $('[name=content]').val();
-
-                        $.post('/api/report/'+reportType, {
-                            relevantID: reportID,
-                            reason: reason + ' ' + detail
-                        }, function (data) {
-                            show_alert("提示", data.data);
-                        });
-                    }
-                });
-            });
-        });
-        feedPage++;
-    }
-
-    function switchMode(mode) {
-        feedMode = mode;
-        feedPage = 1;
-        $feed.html('');
-        $("#feed-more").show();
-        $(".feed-selector").removeClass("am-active");
-        $(".feed-selector[data-mode="+mode+"]").addClass("am-active");
-        loadFeed();
-    }
-
-    $(document).ready(function () {
-                    if($feed) switchMode('watching');
-        
-        $("#feed-more").click(function() {
-            $(this).children("a").text("加载中...");
-            loadFeed();
-        });
-        $(".feed-selector").click(function() {
-            var mode = $(this).attr('data-mode');
-            switchMode(mode);
-        });
-
-        $("#feed-submit").click(function () {
-            $(this).addClass("am-disabled");
-            var content = $('#feed-content').val(), e = this;
-            $.post("/api/feed/postBenben", {content: content}, function (resp) {
-                if(resp.status !== 200) {
-                    show_alert("好像哪里有点问题", resp.data);
-                } else {
-                    $(e).removeClass("am-disabled");
-                    $("#feed-content").val('');
-                    switchMode('watching');
-                }
-            });
-        });
-    });
-
-
-    $("[name=punch]").click(function () {
-        $(this).addClass("am-disabled");
-        $(this).html("<i class='am-icon-spinner am-icon-pulse'></i>求签中");
-        verify = $("[name=verify]").val();
-        $.post("/index/ajax_punch", {verify:verify}, function (data) {
-            var res;
-            res = eval("(" + data + ")");
-            if (res["code"] != 200) {
-                show_alert("好像哪里有点问题", res["message"]);
-                $("[name=punch]").text('点击打卡').removeClass("am-disabled")
-            }
-            else {
-                $('.lg-punch').html(res["more"]["html"]);
-            }
-        });
-    });
-    $("[name=toproblem]").keyup(function (event) {
-        if (event.keyCode === 13) {
-			if($(this).val() === '') return;
-            var pid = $(this).val()
-            if(!isNaN(pid)) pid = 'P'+pid
-            goto_url('/problemnew/show/' + pid)
-        }
-    })
-    $("[name=gotorandom]").click(function () {
-        goto_url('/problemnew/show/P' + (parseInt(Math.random(0, 1) * 4486) + 1000));
-    });
-    $("[name=goto]").click(function () {
-        if($('[name=toproblem]').val()==='') {
-            show_alert("提示", "请输入题号");
-            return;
-        }
-        var pid = $('[name=toproblem]').val()
-        if(!isNaN(pid)) pid = 'P'+pid
-        goto_url('/problemnew/show/' + pid)
-    });
-</script>
 </div>
 
 <div class="am-modal am-modal-alert" tabindex="-1" id="lg-alert">
